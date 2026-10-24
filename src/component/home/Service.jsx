@@ -145,11 +145,11 @@ function FeaturedImage() {
   }
   return (
     <img
-      src={FREEZER_IMAGE}
+      src="https://i.pinimg.com/736x/7e/b8/72/7eb872fd97890f87bb994f05dae0008c.jpg"
       alt={alt}
       loading="lazy"
       onError={() => setOk(false)}
-      style={{ ...fill, objectFit: "cover", display: "block" }}
+      style={{ ...fill, objectFit: "contain", display: "block" }}
     />
   );
 }
