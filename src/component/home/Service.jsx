@@ -149,7 +149,7 @@ function FeaturedImage() {
       alt={alt}
       loading="lazy"
       onError={() => setOk(false)}
-      style={{ ...fill, objectFit: "contain", display: "block" }}
+      style={{ ...fill, objectFit: "cover", display: "block" }}
     />
   );
 }
