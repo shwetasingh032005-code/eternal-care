@@ -39,7 +39,6 @@ const trackLeadConversion = () => {
     });
   }
 };
-
 function PopupForm({ onClose }) {
   const [form, setForm] = useState({
     name: "",
@@ -55,6 +54,7 @@ function PopupForm({ onClose }) {
     window.addEventListener("resize", h);
     return () => window.removeEventListener("resize", h);
   }, []);
+
 
   // ✅ Popup form submit - conversion fire hota hai
   const submit = (e) => {
@@ -751,7 +751,7 @@ export default function LastCare() {
         }
       `}</style>
 
-      {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
+      {/* {showPopup && <PopupForm onClose={() => setShowPopup(false)} />} */}
 
       {/* ══ NAVBAR ══ */}
     <Navbar/>

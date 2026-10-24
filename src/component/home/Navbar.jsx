@@ -572,8 +572,8 @@ export default function Navbar({
   links = DEFAULT_LINKS,
   onBook,
   onSubmit,
-  phoneHref = "tel:+919999741394",
-  phoneLabel = "+91 9999741394",
+  phoneHref = "tel:+918800680093",
+  phoneLabel = "+91 8800680093",
   logoSrc = "/eternalcare.webp",
 }) {
   const width = useScreenWidth();
