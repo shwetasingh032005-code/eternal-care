@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import {
   Phone,
   Mail,
@@ -10,12 +11,23 @@ import {
   Snowflake,
   CheckCircle,
   Users,
+ HeartHandshake,
+  Eye ,
   Star,
   Shield,
   Heart,
   ArrowRight,
   Zap,
+  ShieldCheck,
 } from "lucide-react";
+import Footer from "../component/Footer.jsx";
+import Contact from "../component/home/Contact.jsx";
+import WhyChooseUs from "../component/home/WhyChooseUs.jsx";
+import Process from "../component/home/Process.jsx";
+import About from "../component/home/About.jsx";
+import Hero from '../component/home/Hero.jsx'
+import TestimonialsShowcase from "../component/home/Testimoinal.jsx";
+
 
 // ✅ Google Ads conversion tracking helper
 const trackLeadConversion = () => {
@@ -549,16 +561,16 @@ export default function LastCare() {
         .nav-phone:hover { background:var(--ice);border-color:var(--blue); }
 
         /* ── SECTION LABEL ── */
-        .section-label { display:inline-flex;align-items:center;gap:8px;background:var(--ice);border:1px solid var(--ice2);color:var(--blue);padding:6px 16px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px; }
+        .section-label { display:inline-flex; align-items:center;gap:8px;background:var(--ice);border:1px solid var(--ice2);color:var(--blue);padding:6px 16px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px; }
 
         /* ── HERO ── */
         .hero-section { min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden; }
         .hero-bg { position:absolute;inset:0; }
         .hero-bg img { width:100%;height:100%;object-fit:cover;object-position:center; }
-        .hero-overlay { position:absolute;inset:0;background:linear-gradient(110deg,rgba(10,30,60,0.90) 0%,rgba(10,30,60,0.75) 50%,rgba(10,30,60,0.45) 100%); }
+        .hero-overlay { position:absolute;inset:0;background:linear-gradient(70deg,rgba(10,30,60,0.90) 0%,rgba(10,30,60,0.75) 50%,rgba(10,30,60,0.45) 60%); }
         .hero-content { position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:clamp(100px,12vw,140px) 24px 60px;width:100%; }
         .hero-headline { font-family:'Fraunces',serif;font-size:clamp(20px,4vw,54px);font-weight:900;line-height:1.1;color:#fff;margin-bottom:18px;white-space:nowrap; }
-        .hero-headline span { color:#90caf9;font-style:italic; }
+        .hero-headline span { color:#1A237F;font-style:italic; }
         .hero-sub { font-size:clamp(14px,1.6vw,17px);color:rgba(255,255,255,0.78);line-height:1.75;max-width:500px;margin-bottom:36px; }
         .hero-btns { display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px; }
         .hero-trust { display:flex;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.15); }
@@ -578,7 +590,7 @@ export default function LastCare() {
         .marquee-item { padding:0 32px;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;color:var(--blue);white-space:nowrap;border-right:1px solid var(--ice2); }
 
         /* ── ABOUT ── */
-        .about-grid { display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center; }
+        .about-grid { display:grid;grid-template-columns:1fr ;gap:72px;align-items:center; }
         .about-imgs { position:relative; }
         .about-img-main { width:100%;height:460px;object-fit:cover;border-radius:24px;display:block;box-shadow:var(--shadow-lg); }
         .about-badge { position:absolute;bottom:-24px;left:24px;background:var(--blue);color:#fff;border-radius:18px;padding:18px 24px;box-shadow:var(--shadow-lg); }
@@ -586,10 +598,8 @@ export default function LastCare() {
         .about-badge-lbl { font-size:12px;color:rgba(255,255,255,0.7);font-weight:600;margin-top:4px; }
         .about-img-sm { position:absolute;top:24px;right:-24px;width:140px;height:140px;object-fit:cover;border-radius:16px;border:4px solid #fff;box-shadow:var(--shadow-lg);display:block; }
         .about-title { font-family:'Fraunces',serif;font-size:clamp(26px,3.5vw,48px);font-weight:900;line-height:1.12;color:var(--text);margin-bottom:20px; }
-        .about-title span { color:var(--blue2); }
-        .about-body { font-size:16px;color:var(--muted);line-height:1.82;margin-bottom:18px; }
         .check-list { display:flex;flex-direction:column;gap:12px;margin-bottom:32px; }
-        .check-item { display:flex;align-items:center;gap:12px;font-size:15px;color:#374151;font-weight:500; }
+        .check-item { display:flex;align-items:center;gap:12px;font-size:15px;color:#374151;font-weight:500;margin-top:12px }
 
         /* ── SERVICES ── */
         .services-wrap { display:flex;gap:32px;align-items:flex-start; }
@@ -631,6 +641,8 @@ export default function LastCare() {
         .contact-form-card  { background:#fff;border:1.5px solid var(--border);border-radius:24px;padding:40px 40px 44px;box-shadow:var(--shadow); }
         .contact-form-title { font-family:'Fraunces',serif;font-size:26px;font-weight:800;color:var(--text);margin-bottom:28px; }
         .form-row { display:grid;grid-template-columns:1fr 1fr;gap:14px; }
+
+        
 
         /* ── FAQ ── */
         .faq-grid { display:grid;grid-template-columns:1fr 1fr;gap:14px; }
@@ -747,7 +759,7 @@ export default function LastCare() {
             onClick={() => scrollTo("home")}
           >
             <img
-              src="/logo2.png"
+              src="/eternalcare.webp"
               alt="LastCare"
               style={{
                 height: 52,
@@ -928,223 +940,11 @@ export default function LastCare() {
       </nav>
 
       {/* ══ HERO ══ */}
-      <section id="home" className="hero-section">
-        <div className="hero-bg">
-          <img src="/1.png" alt="Funeral services" />
-          <div className="hero-overlay" />
-        </div>
-
-        <div className="hero-content">
-          <div style={{ maxWidth: 620 }}>
-            <h1
-              className="hero-headline anim-up"
-              style={{ animationDelay: ".1s" }}
-            >
-              We Stand With You <span>In Times of Grief</span>
-            </h1>
-            <p className="hero-sub anim-up" style={{ animationDelay: ".2s" }}>
-              Medical-grade dead body freezer boxes delivered in{" "}
-              <strong style={{ color: "#fff" }}>30–60 minutes</strong> across
-              all sectors of Greater Noida. Available 24/7 with transparent
-              pricing and compassionate service.
-            </p>
-            <div
-              className="hero-btns anim-up"
-              style={{ animationDelay: ".3s" }}
-            >
-              <button
-                className="btn-red"
-                onClick={() => setShowPopup(true)}
-                style={{ fontSize: 15, padding: "14px 28px" }}
-              >
-                📲 Book Freezer Box <ArrowRight size={16} />
-              </button>
-              <a
-                href="tel:+919999741394"
-                className="btn-outline-white"
-                style={{ fontSize: 15, padding: "14px 24px" }}
-              >
-                <Phone size={16} /> +91 9999741394
-              </a>
-            </div>
-            <div
-              className="hero-trust anim-up"
-              style={{ animationDelay: ".4s" }}
-            >
-              {[
-                ["⚡", "30–60 Min Delivery"],
-                ["❄️", "Medical Grade Box"],
-                ["💰", "No Hidden Charges"],
-                ["🏆", "1000+ Families"],
-              ].map(([ic, tx]) => (
-                <div key={tx} className="trust-item">
-                  <span style={{ fontSize: 16 }}>{ic}</span>
-                  {tx}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            bottom: 28,
-            left: "50%",
-            transform: "translateX(-50%)",
-            zIndex: 3,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: 6,
-            opacity: 0.5,
-          }}
-        >
-          <div
-            style={{
-              width: 1,
-              height: 36,
-              background: "linear-gradient(to bottom,transparent,#fff)",
-            }}
-          />
-          <ChevronDown size={18} color="#fff" />
-        </div>
-      </section>
-
-      {/* ══ MARQUEE ══ */}
-      <div className="marquee-wrap">
-        <div className="marquee-track">
-          {[...Array(2)].map((_, rep) =>
-            [
-              "❄️ Dead Body Freezer Box on Rent",
-              "🚨 24/7 Emergency Support",
-              "🚐 Dead Body Transportation",
-              "🚑 Ambulance Services",
-              "🕉️ Funeral Arrangements",
-              "📋 Documentation Support",
-            ].map((item, i) => (
-              <span key={`${rep}-${i}`} className="marquee-item">
-                {item}
-              </span>
-            )),
-          )}
-        </div>
-      </div>
-
-      {/* ══ STATS ══ */}
-      <div className="stats-bar">
-        <div className="stats-inner">
-          {[
-            {
-              n: "1000+",
-              l: "Families Served",
-              ic: <Users size={22} color="rgba(255,255,255,0.5)" />,
-            },
-            {
-              n: "24/7",
-              l: "Always Available",
-              ic: <Clock size={22} color="rgba(255,255,255,0.5)" />,
-            },
-            {
-              n: "30 Min",
-              l: "Avg. Delivery Time",
-              ic: <Zap size={22} color="rgba(255,255,255,0.5)" />,
-            },
-            {
-              n: "100%",
-              l: "Client Satisfaction",
-              ic: <Star size={22} color="rgba(255,255,255,0.5)" />,
-            },
-          ].map((s, i) => (
-            <div key={i} className="stat-cell">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  marginBottom: 8,
-                }}
-              >
-                {s.ic}
-              </div>
-              <div className="stat-num">{s.n}</div>
-              <div className="stat-lbl">{s.l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <Hero/>
+  
 
       {/* ══ ABOUT ══ */}
-      <section
-        id="about"
-        style={{ padding: "clamp(60px,8vw,100px) 24px", background: "#fff" }}
-      >
-        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <div className="about-grid">
-            <div className="about-imgs">
-              <img
-                src="https://i.pinimg.com/736x/79/82/03/7982033729bec6631c8f54dc96a1c12a.jpg"
-                alt="Professional team"
-                className="about-img-main"
-              />
-              <div className="about-badge">
-                <div className="about-badge-num">10+</div>
-                <div className="about-badge-lbl">Years of Trusted Service</div>
-              </div>
-              <img
-                src="https://i.pinimg.com/736x/ad/7b/aa/ad7baab8cec8552796fda0dec9a87232.jpg"
-                alt="Care"
-                className="about-img-sm"
-              />
-            </div>
-            <div>
-              <div className="section-label">
-                <Heart size={13} /> About Us
-              </div>
-              <h2 className="about-title">
-                Compassionate Care
-                <br />
-                <span>When It Matters Most</span>
-              </h2>
-              <p className="about-body">
-                With over a decade of experience, we specialise in dead body
-                freezer box rental services along with ambulance support and
-                dignified transportation — helping families navigate their most
-                difficult moments with ease and peace of mind.
-              </p>
-              <p className="about-body">
-                Our team is committed to the highest standards of care, hygiene,
-                and respect, ensuring the body is preserved safely while
-                providing compassionate support to grieving families across all
-                of Greater Noida.
-              </p>
-              <div className="check-list">
-                {[
-                  "Licensed and certified professionals",
-                  "Compassionate and experienced team",
-                  "Transparent pricing with no hidden costs",
-                  "Complete documentation assistance",
-                ].map((t) => (
-                  <div key={t} className="check-item">
-                    <CheckCircle
-                      size={18}
-                      color="#2e7d32"
-                      style={{ flexShrink: 0 }}
-                    />
-                    <span>{t}</span>
-                  </div>
-                ))}
-              </div>
-              <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-                <button className="btn-blue" onClick={() => setShowPopup(true)}>
-                  Book Freezer Box <ArrowRight size={16} />
-                </button>
-                <a href="tel:+919999741394" className="btn-outline-blue">
-                  <Phone size={16} /> Call Now
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<About/>
 
       {/* ══ SERVICES ══ */}
       <section
@@ -1232,243 +1032,17 @@ export default function LastCare() {
         </div>
       </section>
 
+        {/* ══ Process ══ */}
+        <Process/>
+
       {/* ══ WHY US ══ */}
-      <section
-        style={{ padding: "clamp(60px,8vw,90px) 24px", background: "#fff" }}
-      >
-        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 52 }}>
-            <div className="section-label" style={{ justifyContent: "center" }}>
-              <Shield size={13} /> Why Choose Us
-            </div>
-            <h2
-              style={{
-                fontFamily: "'Fraunces',serif",
-                fontSize: "clamp(26px,3.5vw,44px)",
-                fontWeight: 900,
-                color: "#1a1a2e",
-              }}
-            >
-              Our Work{" "}
-              <span style={{ color: "#1565c0" }}>Speaks for Itself</span>
-            </h2>
-          </div>
-          <div className="why-grid">
-            {[
-              {
-                ic: "⚡",
-                t: "30–60 Min Delivery",
-                d: "Fastest response time in Greater Noida",
-              },
-              {
-                ic: "❄️",
-                t: "Medical Grade Box",
-                d: "0°C to –5°C certified & hygienic",
-              },
-              {
-                ic: "💰",
-                t: "Fair & Transparent",
-                d: "Zero hidden charges, always",
-              },
-              {
-                ic: "🤝",
-                t: "Caring Team",
-                d: "Trained, compassionate professionals",
-              },
-              {
-                ic: "📍",
-                t: "Pan-Greater Noida",
-                d: "Every sector fully covered",
-              },
-              {
-                ic: "📋",
-                t: "Documentation Help",
-                d: "Legal formalities made easy",
-              },
-            ].map((w, i) => (
-              <div key={i} className="why-card">
-                <div className="why-icon">{w.ic}</div>
-                <div className="why-title">{w.t}</div>
-                <div className="why-desc">{w.d}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  <WhyChooseUs/>
 
       {/* ══ CONTACT ══ */}
-      <section
-        id="contact"
-        style={{ padding: "clamp(60px,8vw,100px) 24px", background: "#f7faff" }}
-      >
-        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 60 }}>
-            <div className="section-label" style={{ justifyContent: "center" }}>
-              <Phone size={13} /> Get In Touch
-            </div>
-            <h2
-              style={{
-                fontFamily: "'Fraunces',serif",
-                fontSize: "clamp(28px,4.5vw,52px)",
-                fontWeight: 900,
-                color: "#1a1a2e",
-                lineHeight: 1.12,
-              }}
-            >
-              Contact <span style={{ color: "#1565c0" }}>Us Today</span>
-            </h2>
-            <p style={{ color: "#6b7280", fontSize: 16, marginTop: 12 }}>
-              Our compassionate team is available 24/7 to assist you
-            </p>
-          </div>
-          <div className="contact-grid">
-            <div className="contact-info-card">
-              <img
-                src="/img.jpeg"
-                alt="Support team"
-                className="contact-info-img"
-              />
-              <div className="contact-info-body">
-                <h3 className="contact-info-title">Quick Contact</h3>
-                {[
-                  {
-                    ic: <Phone size={17} color="#90caf9" />,
-                    label: "+91 9999741394",
-                    sub: "24/7 Helpline",
-                    href: "tel:+919999741394",
-                  },
-                  {
-                    ic: <Mail size={17} color="#ce93d8" />,
-                    label: "info@lastcarefreezerbox.in",
-                    sub: "Email us anytime",
-                    href: "mailto:info@lastcarefreezerbox.in",
-                  },
-                  {
-                    ic: <MapPin size={17} color="#80cbc4" />,
-                    label:
-                      "HCPQ+R42 Amrapali Icon Leisure Valley Gr Noida, UP 201318",
-                    sub: "Coverage area",
-                    href: null,
-                  },
-                  {
-                    ic: <Clock size={17} color="#a5d6a7" />,
-                    label: "24 / 7 Available",
-                    sub: "Always here for you",
-                    href: null,
-                  },
-                ].map((c, i) => (
-                  <a
-                    key={i}
-                    className="contact-row"
-                    href={c.href || "#"}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <div className="contact-row-icon">{c.ic}</div>
-                    <div>
-                      <div className="contact-row-main">{c.label}</div>
-                      <div className="contact-row-sub">{c.sub}</div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="contact-form-card">
-              <h3 className="contact-form-title">Send Us a Message</h3>
-              <form onSubmit={handleContact}>
-                <div className="field-wrap">
-                  <label className="field-label">Full Name *</label>
-                  <input
-                    required
-                    type="text"
-                    value={contactForm.name}
-                    onChange={(e) =>
-                      setContactForm({ ...contactForm, name: e.target.value })
-                    }
-                    placeholder="Your name"
-                    className="field-input"
-                  />
-                </div>
-                <div className="form-row">
-                  <div className="field-wrap">
-                    <label className="field-label">Phone *</label>
-                    <input
-                      required
-                      type="tel"
-                      value={contactForm.phone}
-                      onChange={(e) =>
-                        setContactForm({
-                          ...contactForm,
-                          phone: e.target.value,
-                        })
-                      }
-                      placeholder="+91"
-                      className="field-input"
-                    />
-                  </div>
-                  <div className="field-wrap">
-                    <label className="field-label">Email</label>
-                    <input
-                      type="email"
-                      value={contactForm.email}
-                      onChange={(e) =>
-                        setContactForm({
-                          ...contactForm,
-                          email: e.target.value,
-                        })
-                      }
-                      placeholder="email@example.com"
-                      className="field-input"
-                    />
-                  </div>
-                </div>
-                <div className="field-wrap">
-                  <label className="field-label">Location</label>
-                  <input
-                    type="text"
-                    value={contactForm.location}
-                    onChange={(e) =>
-                      setContactForm({
-                        ...contactForm,
-                        location: e.target.value,
-                      })
-                    }
-                    placeholder="Sector, Greater Noida"
-                    className="field-input"
-                  />
-                </div>
-                <div className="field-wrap">
-                  <label className="field-label">Message</label>
-                  <textarea
-                    rows={4}
-                    value={contactForm.message}
-                    onChange={(e) =>
-                      setContactForm({
-                        ...contactForm,
-                        message: e.target.value,
-                      })
-                    }
-                    placeholder="How can we help you?"
-                    className="field-input"
-                    style={{ resize: "none" }}
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="btn-red"
-                  style={{
-                    width: "100%",
-                    justifyContent: "center",
-                    animation: "none",
-                    fontSize: 15,
-                  }}
-                >
-                  Send Message →
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
+    <Contact/>
+
+     {/* ══ Testimonial ══ */}
+     <TestimonialsShowcase/>
 
       {/* ══ MAP ══ */}
       <section
@@ -1545,225 +1119,10 @@ export default function LastCare() {
         </div>
       </section>
 
-      {/* ══ FAQ ══ */}
-      <section
-        style={{ padding: "clamp(60px,8vw,90px) 24px", background: "#f7faff" }}
-      >
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 52 }}>
-            <div className="section-label" style={{ justifyContent: "center" }}>
-              ❓ FAQs
-            </div>
-            <h2
-              style={{
-                fontFamily: "'Fraunces',serif",
-                fontSize: "clamp(26px,3.5vw,44px)",
-                fontWeight: 900,
-                color: "#1a1a2e",
-              }}
-            >
-              Frequently Asked{" "}
-              <span style={{ color: "#1565c0" }}>Questions</span>
-            </h2>
-          </div>
-          <div className="faq-grid">
-            {faqs.map((f, i) => (
-              <div key={i} className="faq-card">
-                <button
-                  className="faq-q-btn"
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                >
-                  <span className="faq-q-text">{f.q}</span>
-                  <ChevronDown
-                    size={19}
-                    color="#1565c0"
-                    style={{
-                      flexShrink: 0,
-                      transform: openFaq === i ? "rotate(180deg)" : "none",
-                      transition: "transform .3s",
-                    }}
-                  />
-                </button>
-                {openFaq === i && <div className="faq-answer">{f.a}</div>}
-              </div>
-            ))}
-          </div>
-          <div
-            style={{
-              marginTop: 52,
-              textAlign: "center",
-              background: "#fff",
-              padding: "clamp(24px,5vw,44px)",
-              borderRadius: 24,
-              border: "1.5px solid #e0e7ff",
-              boxShadow: "0 4px 24px rgba(26,58,92,0.07)",
-            }}
-          >
-            <h3
-              style={{
-                fontFamily: "'Fraunces',serif",
-                fontSize: 24,
-                fontWeight: 800,
-                color: "#1a1a2e",
-                marginBottom: 8,
-              }}
-            >
-              Still Have Questions?
-            </h3>
-            <p style={{ color: "#6b7280", fontSize: 15, marginBottom: 24 }}>
-              We're available 24/7 — call us or send a message anytime
-            </p>
-            <div
-              style={{
-                display: "flex",
-                gap: 14,
-                justifyContent: "center",
-                flexWrap: "wrap",
-              }}
-            >
-              <a
-                href="tel:+919999741394"
-                className="btn-red"
-                style={{ textDecoration: "none", animation: "none" }}
-              >
-                <Phone size={16} /> Call Now
-              </a>
-              <button
-                className="btn-outline-blue"
-                onClick={() => scrollTo("contact")}
-              >
-                Contact Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* ══ FOOTER ══ */}
-      <footer className="footer-wrap">
-        <div className="footer-grid">
-          <div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 12,
-                marginBottom: 4,
-              }}
-            >
-              <div>
-                <div
-                  style={{
-                    fontFamily: "'Fraunces',serif",
-                    fontWeight: 900,
-                    fontSize: 26,
-                    color: "#fff",
-                    lineHeight: 1,
-                  }}
-                >
-                  LastCare
-                </div>
-                <div
-                  style={{
-                    fontSize: 10,
-                    color: "#90caf9",
-                    fontWeight: 700,
-                    letterSpacing: 2.5,
-                    textTransform: "uppercase",
-                    marginTop: 3,
-                  }}
-                >
-                  Freezer Box on Rent
-                </div>
-              </div>
-            </div>
-            <p className="footer-brand-desc">
-              24/7 medical-grade freezer box rental and funeral support services
-              across every sector of Greater Noida — handled with dignity,
-              compassion, and professionalism.
-            </p>
-          </div>
-          <div>
-            <div className="footer-heading">Quick Links</div>
-            {navLinks.map((n) => (
-              <button
-                key={n}
-                className="footer-link"
-                onClick={() => scrollTo(n.toLowerCase())}
-              >
-                {n}
-              </button>
-            ))}
-          </div>
-          <div>
-            <div className="footer-heading">Contact</div>
-            {[
-              {
-                ic: <Phone size={15} />,
-                content: (
-                  <a href="tel:+919999741394" className="footer-contact-txt">
-                    +91 9999741394
-                  </a>
-                ),
-                sub: "24/7 Helpline",
-              },
-              {
-                ic: <Mail size={15} />,
-                content: (
-                  <a
-                    href="mailto:info@lastcarefreezerbox.in"
-                    className="footer-contact-txt"
-                    style={{ fontSize: 12 }}
-                  >
-                    info@lastcarefreezerbox.in
-                  </a>
-                ),
-                sub: "",
-              },
-              {
-                ic: <MapPin size={15} />,
-                content: (
-                  <span className="footer-contact-txt">
-                    HCPQ+R42 Amrapali Icon Leisure Valley Greater Noida, UP
-                    201318
-                  </span>
-                ),
-                sub: "",
-              },
-            ].map((c, i) => (
-              <div key={i} className="footer-contact-row">
-                <span
-                  style={{
-                    color: "rgba(255,255,255,0.5)",
-                    marginTop: 2,
-                    flexShrink: 0,
-                  }}
-                >
-                  {c.ic}
-                </span>
-                <div>
-                  {c.content}
-                  {c.sub && (
-                    <div
-                      style={{
-                        fontSize: 11,
-                        color: "rgba(255,255,255,0.35)",
-                        marginTop: 2,
-                      }}
-                    >
-                      {c.sub}
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="footer-divider">
-          © 2026 LastCare Freezer Box on Rent. All rights reserved. | Greater
-          Noida, Uttar Pradesh
-        </div>
-      </footer>
+     <Footer/>
     </>
   );
 }
