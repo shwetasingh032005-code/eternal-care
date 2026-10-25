@@ -22,7 +22,7 @@ import {
 
 const Faq = () => {
   return (
-    <section
+    <section id='faq'
         style={{ padding: "clamp(60px,8vw,90px) 24px", background: "#f7faff" }}
       >
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>

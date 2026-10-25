@@ -578,18 +578,6 @@ export default function LastCare() {
         .hero-trust { display:flex;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.15); }
         .trust-item { display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.72);font-size:13px;font-weight:600; }
 
-        /* ── STATS ── */
-        .stats-bar { background:var(--blue);padding:0 24px; }
-        .stats-inner { max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr); }
-        .stat-cell { padding:32px 20px;text-align:center;border-right:1px solid rgba(255,255,255,0.12); }
-        .stat-cell:last-child { border-right:none; }
-        .stat-num { font-family:'Fraunces',serif;font-size:clamp(28px,3.5vw,48px);font-weight:900;color:#fff;line-height:1; }
-        .stat-lbl { font-size:13px;color:rgba(255,255,255,0.6);font-weight:500;margin-top:6px; }
-
-        /* ── MARQUEE ── */
-        .marquee-wrap { background:var(--ice);border-top:1px solid var(--ice2);border-bottom:1px solid var(--ice2);padding:14px 0;overflow:hidden; }
-        .marquee-track { display:flex;width:max-content;animation:marquee 18s linear infinite; }
-        .marquee-item { padding:0 32px;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;color:var(--blue);white-space:nowrap;border-right:1px solid var(--ice2); }
 
         /* ── ABOUT ── */
         .about-grid { display:grid;grid-template-columns:1fr ;gap:72px;align-items:center; }
