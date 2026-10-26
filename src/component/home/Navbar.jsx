@@ -771,7 +771,7 @@ export default function Navbar({
             ) : (
               <>
                 {/* Quick call button, always visible on phones */}
-                <ActionButton
+                {/* <ActionButton
                   as="a"
                   href={phoneHref}
                   aria-label={`Call ${phoneLabel}`}
@@ -785,7 +785,7 @@ export default function Navbar({
                   hover={{ boxShadow: "0 8px 22px rgba(231,0,11,0.32)" }}
                 >
                   <Phone size={19} aria-hidden="true" />
-                </ActionButton>
+                </ActionButton> */}
                 <button
                   type="button"
                   onClick={() => setMenuOpen(!menuOpen)}
@@ -886,6 +886,7 @@ export default function Navbar({
                       color: C.navy,
                       border: `2px solid ${C.navy}`,
                       background: "#fff",
+                      padding:"5px",
                     }}
                     hover={{ background: C.soft }}
                   >
@@ -902,6 +903,7 @@ export default function Navbar({
                       color: "#fff",
                       background: C.red,
                       border: `2px solid ${C.red}`,
+                      padding:"5px",
                     }}
                     hover={{ boxShadow: "0 8px 22px rgba(231,0,11,0.32)" }}
                   >
