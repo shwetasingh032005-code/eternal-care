@@ -44,15 +44,15 @@ const Hero = () => {
               style={{ animationDelay: ".3s" }}
             >
               <button
-                className="rounded-2xl bg-[#6B3FA0] flex gap-2 items-center cursor-pointer hover:bg-purple-400/15 text-white"
+                className="rounded-2xl bg-white flex gap-2 items-center cursor-pointer text-[#1A237F] font-bold"
                 onClick={() => setShowPopup(true)}
-                style={{ fontSize: 15, padding: "14px 28px" }}
+                style={{ fontStyle:"25", padding: "14px 28px" }}
               >
                 Request a Freezer Box <ArrowRight size={16} />
               </button>
               <a
                 href="#contact"
-                className="btn-outline-white rounded-full"
+                className="rounded-2xl max-sm:w-62 bg-[#b33410] flex gap-2 items-center cursor-pointer hover:bg-red-500 text-white font-bold hover:shadow-lg shadow-[#b33410]/40 hover:shadow-xl hover:shadow-[#b33410]/60 transition-all duration-300"
                 style={{ fontSize: 15, padding: "14px 24px" }}
               >
              Contact Us <ArrowRight size={16} />

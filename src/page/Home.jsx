@@ -709,7 +709,7 @@ export default function LastCare() {
           .hero-content   { padding:88px 16px 48px; }
           .hero-headline  { font-size:clamp(20px,7vw,34px); }
           .hero-btns      { gap:10px; }
-          .btn-red, .btn-blue, .btn-outline-white { padding:12px 22px;font-size:14px; }
+          .btn-red, .btn-blue, .btn { padding:12px 22px;font-size:14px;width:52%;    background: red; }
           .stats-inner    { grid-template-columns:1fr 1fr; }
           .stat-cell      { padding:22px 12px; }
           .marquee-item   { padding:0 20px;font-size:12px; }
