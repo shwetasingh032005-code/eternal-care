@@ -1,22 +1,9 @@
 import React from 'react'
 import {
-  Phone,
-  Mail,
-  MapPin,
   Clock,
-  Menu,
-  X,
   ChevronDown,
-  Snowflake,
-  CheckCircle,
-  Users,
- HeartHandshake,
-  Eye ,
-  Star,
-  Shield,
   Heart,
   ArrowRight,
-  Zap,
   ShieldCheck,
 } from "lucide-react";
 
@@ -43,13 +30,14 @@ const Hero = () => {
               className="hero-btns anim-up"
               style={{ animationDelay: ".3s" }}
             >
-              <button
+              {/* <button
+                type="button"
                 className="rounded-2xl bg-white flex gap-2 items-center cursor-pointer text-[#1A237F] font-bold"
-                onClick={() => setShowPopup(true)}
+                onClick={() => window.dispatchEvent(new Event("open-booking"))}
                 style={{ fontStyle:"25", padding: "14px 28px" }}
               >
                 Request a Freezer Box <ArrowRight size={16} />
-              </button>
+              </button> */}
               <a
                 href="#contact"
                 className="rounded-2xl max-sm:w-62 bg-[#b33410] flex gap-2 items-center cursor-pointer hover:bg-red-500 text-white font-bold hover:shadow-lg shadow-[#b33410]/40 hover:shadow-xl hover:shadow-[#b33410]/60 transition-all duration-300"

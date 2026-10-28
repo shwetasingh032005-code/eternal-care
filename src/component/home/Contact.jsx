@@ -131,7 +131,7 @@ function InfoCard({ icon: Icon, title, href, children }) {
         <strong
           style={{
             display: "block",
-            fontFamily: "'Fraunces', serif",
+            fontFamily: "'Poppins', sans-serif",
             fontSize: 18,
             fontWeight: 700,
             color: NAVY,
@@ -194,7 +194,9 @@ function CtaButton({ href, children, variant = "red", icon: Icon }) {
           : hover
             ? "rgba(255,255,255,0.14)"
             : "transparent",
-        border: isRed ? "2px solid transparent" : "2px solid rgba(255,255,255,0.6)",
+        border: isRed
+          ? "2px solid transparent"
+          : "2px solid rgba(255,255,255,0.6)",
         transform: hover ? "translateY(-3px)" : "none",
         transition: "transform .25s ease, background .25s ease",
       }}
@@ -217,7 +219,7 @@ export default function Contact() {
       id="contact"
       style={{
         background: "#fff",
-        fontFamily: "'Instrument Sans', sans-serif",
+        fontFamily: "'Poppins', sans-serif",
         padding:
           "clamp(64px,8vw,104px) clamp(16px,4vw,32px) clamp(64px,8vw,104px)",
         overflow: "hidden",
@@ -225,10 +227,12 @@ export default function Contact() {
     >
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         {/* Heading */}
-        <Reveal style={{ maxWidth: 640, margin: "0 auto 48px", textAlign: "center" }}>
+        <Reveal
+          style={{ maxWidth: 640, margin: "0 auto 48px", textAlign: "center" }}
+        >
           <h2
             style={{
-              fontFamily: "'Fraunces', serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "clamp(28px,4vw,44px)",
               fontWeight: 900,
               lineHeight: 1.15,
@@ -390,10 +394,12 @@ export default function Contact() {
               }}
             />
 
-            <div style={{ position: "relative", maxWidth: 680, margin: "0 auto" }}>
+            <div
+              style={{ position: "relative", maxWidth: 680, margin: "0 auto" }}
+            >
               <h2
                 style={{
-                  fontFamily: "'Fraunces', serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontSize: "clamp(26px,4vw,40px)",
                   fontWeight: 900,
                   lineHeight: 1.2,
@@ -438,7 +444,6 @@ export default function Contact() {
                 <CtaButton href={PHONE_HREF} icon={Phone}>
                   Call {PHONE_LABEL}
                 </CtaButton>
-                
               </div>
             </div>
           </div>

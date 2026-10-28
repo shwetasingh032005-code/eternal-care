@@ -128,7 +128,7 @@ function WhyCard({ Icon, title, text, index }) {
           position: "absolute",
           top: 6,
           right: 18,
-          fontFamily: "'Fraunces', serif",
+          fontFamily: "'Poppins', sans-serif",
           fontSize: 64,
           fontWeight: 900,
           lineHeight: 1,
@@ -160,7 +160,7 @@ function WhyCard({ Icon, title, text, index }) {
       <h3
         style={{
           position: "relative",
-          fontFamily: "'Fraunces', serif",
+          fontFamily: "'Poppins', sans-serif",
           fontSize: 20,
           fontWeight: 800,
           color: NAVY,
@@ -242,7 +242,7 @@ export default function WhyChooseUs() {
         position: "relative",
         overflow: "hidden",
         background: `linear-gradient(180deg, ${SOFT} 0%, #ffffff 100%)`,
-        fontFamily: "'Instrument Sans', sans-serif",
+        fontFamily: "'Poppins', sans-serif",
         padding: "clamp(64px,8vw,104px) clamp(16px,4vw,32px)",
       }}
     >
@@ -302,7 +302,7 @@ export default function WhyChooseUs() {
           </span>
           <h2
             style={{
-              fontFamily: "'Fraunces', serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "clamp(28px,4vw,46px)",
               fontWeight: 900,
               lineHeight: 1.15,
@@ -332,16 +332,17 @@ export default function WhyChooseUs() {
             }}
           >
             {BRAND_NAME} provides clean, well-maintained freezer box
-            arrangements to preserve mortal remains with dignity and care. Whether
-            your family needs a day or several days for relatives to arrive, we
-            deliver the freezer box, set it up and collect it afterwards, so you
-            can focus on your loved ones while we handle the rest.
+            arrangements to preserve mortal remains with dignity and care.
+            Whether your family needs a day or several days for relatives to
+            arrive, we deliver the freezer box, set it up and collect it
+            afterwards, so you can focus on your loved ones while we handle the
+            rest.
           </p>
 
           <div style={{ marginTop: 32 }}>
             <p
               style={{
-                fontFamily: "'Fraunces', serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontSize: 18,
                 fontWeight: 700,
                 color: NAVY,

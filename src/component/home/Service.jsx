@@ -102,7 +102,7 @@ function HoverButton({ as = "button", base, hover, children, ...rest }) {
         minHeight: 50,
         padding: "0 26px",
         borderRadius: 12,
-        fontFamily: "'Instrument Sans', sans-serif",
+        fontFamily: "'Poppins', sans-serif",
         fontWeight: 700,
         fontSize: 15,
         cursor: "pointer",
@@ -195,7 +195,7 @@ function ServiceCard({ item, onBook, compact }) {
       <h3
         style={{
           margin: "20px 0 10px",
-          fontFamily: "'Fraunces', serif",
+          fontFamily: "'Poppins', sans-serif",
           fontWeight: 700,
           fontSize: 21,
           lineHeight: 1.3,
@@ -208,7 +208,7 @@ function ServiceCard({ item, onBook, compact }) {
         style={{
           margin: "0 0 20px",
           flex: 1,
-          fontFamily: "'Instrument Sans', sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           fontSize: 15,
           lineHeight: 1.75,
           color: C.muted,
@@ -228,7 +228,7 @@ function ServiceCard({ item, onBook, compact }) {
           border: "none",
           padding: 0,
           cursor: "pointer",
-          fontFamily: "'Instrument Sans', sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           fontWeight: 700,
           fontSize: 14,
           color: hover ? C.navy : C.purple,
@@ -256,6 +256,15 @@ export default function Services({ onBook, phoneHref = "tel:+918800680093" }) {
   const F = featured;
   const FI = F.Icon;
 
+  // Uses your onBook function if you pass one. Otherwise scrolls to the contact section.
+  const handleBook = (title) => {
+    if (onBook) {
+      onBook(title);
+      return;
+    }
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section
       id="services"
@@ -278,7 +287,7 @@ export default function Services({ onBook, phoneHref = "tel:+918800680093" }) {
             id="services-title"
             style={{
               margin: 0,
-              fontFamily: "'Fraunces', serif",
+              fontFamily: "'Poppins', sans-serif",
               fontWeight: 900,
               fontSize: isSmall ? 28 : isMobile ? 32 : 44,
               lineHeight: 1.15,
@@ -299,7 +308,7 @@ export default function Services({ onBook, phoneHref = "tel:+918800680093" }) {
           <p
             style={{
               margin: "14px 0 0",
-              fontFamily: "'Instrument Sans', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: 16,
               lineHeight: 1.75,
               color: C.muted,
@@ -345,7 +354,7 @@ export default function Services({ onBook, phoneHref = "tel:+918800680093" }) {
             <h3
               style={{
                 margin: "22px 0 12px",
-                fontFamily: "'Fraunces', serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontWeight: 800,
                 fontSize: isSmall ? 26 : isMobile ? 30 : 36,
                 lineHeight: 1.2,
@@ -357,7 +366,7 @@ export default function Services({ onBook, phoneHref = "tel:+918800680093" }) {
             <p
               style={{
                 margin: "0 0 24px",
-                fontFamily: "'Instrument Sans', sans-serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontSize: isSmall ? 15 : 16,
                 lineHeight: 1.8,
                 color: "rgba(255,255,255,0.88)",
@@ -383,7 +392,7 @@ export default function Services({ onBook, phoneHref = "tel:+918800680093" }) {
                     display: "flex",
                     alignItems: "flex-start",
                     gap: 10,
-                    fontFamily: "'Instrument Sans', sans-serif",
+                    fontFamily: "'Poppins', sans-serif",
                     fontSize: 15,
                     lineHeight: 1.5,
                     color: "#fff",
@@ -410,7 +419,7 @@ export default function Services({ onBook, phoneHref = "tel:+918800680093" }) {
               <HoverButton
                 as="button"
                 type="button"
-                onClick={() => onBook && onBook(F.title)}
+                onClick={() => handleBook(F.title)}
                 base={{ background: "#fff", color: C.navy, border: "2px solid #fff" }}
                 hover={{ boxShadow: "0 10px 26px rgba(0,0,0,0.25)" }}
               >
@@ -452,7 +461,7 @@ export default function Services({ onBook, phoneHref = "tel:+918800680093" }) {
           }}
         >
           {services.map((s) => (
-            <ServiceCard key={s.title} item={s} onBook={onBook} compact={isSmall} />
+            <ServiceCard key={s.title} item={s} onBook={handleBook} compact={isSmall} />
           ))}
         </div>
       </div>

@@ -198,7 +198,7 @@ function Step({ Icon, title, text, index, total, reached, onReach, size }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          fontFamily: "'Fraunces', serif",
+          fontFamily: "'Poppins', sans-serif",
           fontSize: size > 44 ? 20 : 18,
           fontWeight: 900,
           transition: "all .5s ease",
@@ -232,7 +232,7 @@ function Step({ Icon, title, text, index, total, reached, onReach, size }) {
             position: "absolute",
             top: -2,
             right: 14,
-            fontFamily: "'Fraunces', serif",
+            fontFamily: "'Poppins', sans-serif",
             fontSize: 54,
             fontWeight: 900,
             lineHeight: 1,
@@ -283,7 +283,7 @@ function Step({ Icon, title, text, index, total, reached, onReach, size }) {
             </span>
             <h3
               style={{
-                fontFamily: "'Fraunces', serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontSize: 18.5,
                 fontWeight: 800,
                 color: "#fff",
@@ -372,7 +372,7 @@ export default function Process() {
       style={{
         position: "relative",
         overflow: "hidden",
-        fontFamily: "'Instrument Sans', sans-serif",
+        fontFamily: "'Poppins', sans-serif",
         // less height: smaller top and bottom padding
         padding: "clamp(36px,5vw,60px) clamp(16px,4vw,32px)",
         backgroundColor: BLUE_A,
@@ -424,7 +424,7 @@ export default function Process() {
 
             <h2
               style={{
-                fontFamily: "'Fraunces', serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontSize: "clamp(28px,3.8vw,42px)",
                 fontWeight: 900,
                 lineHeight: 1.12,
@@ -512,7 +512,7 @@ export default function Process() {
                 style={{
                   display: "block",
                   margin: "4px 0 0",
-                  fontFamily: "'Fraunces', serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontSize: isPhone ? 24 : 28,
                   fontWeight: 800,
                   color: "#fff",

@@ -11,8 +11,8 @@ import {
   Snowflake,
   CheckCircle,
   Users,
- HeartHandshake,
-  Eye ,
+  HeartHandshake,
+  Eye,
   Star,
   Shield,
   Heart,
@@ -25,11 +25,10 @@ import Contact from "../component/home/Contact.jsx";
 import WhyChooseUs from "../component/home/WhyChooseUs.jsx";
 import Process from "../component/home/Process.jsx";
 import About from "../component/home/About.jsx";
-import Hero from '../component/home/Hero.jsx'
+import Hero from "../component/home/Hero.jsx";
 import TestimonialsShowcase from "../component/home/Testimoinal.jsx";
 import Services from "../component/home/Service.jsx";
 import Navbar from "../component/home/Navbar.jsx";
-
 
 // ✅ Google Ads conversion tracking helper
 const trackLeadConversion = () => {
@@ -54,7 +53,6 @@ function PopupForm({ onClose }) {
     window.addEventListener("resize", h);
     return () => window.removeEventListener("resize", h);
   }, []);
-
 
   // ✅ Popup form submit - conversion fire hota hai
   const submit = (e) => {
@@ -168,7 +166,7 @@ function PopupForm({ onClose }) {
             <div>
               <h2
                 style={{
-                  fontFamily: "'Fraunces',serif",
+                  fontFamily: "'Poppins',sans-serif",
                   fontSize: isMobile ? 15 : 17,
                   fontWeight: 700,
                   color: "#fff",
@@ -218,7 +216,7 @@ function PopupForm({ onClose }) {
               <div style={{ fontSize: 44, marginBottom: 10 }}>✅</div>
               <h3
                 style={{
-                  fontFamily: "'Fraunces',serif",
+                  fontFamily: "'Poppins',sans-serif",
                   fontSize: 18,
                   color: "#1a3a5c",
                   marginBottom: 6,
@@ -492,11 +490,11 @@ export default function LastCare() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,700&family=Instrument+Sans:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&display=swap');
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Instrument Sans', sans-serif; background: #fff; color: #1a1a2e; overflow-x: hidden; }
+        body { font-family: 'Poppins', sans-serif; background: #fff; color: #1a1a2e; overflow-x: hidden; }
 
         :root {
           --blue:   #1a3a5c;
@@ -530,7 +528,7 @@ export default function LastCare() {
         .popup-header { background:linear-gradient(135deg,#1a3a5c 0%,#1565c0 100%);padding:18px 18px 16px;position:relative; }
         .popup-close { position:absolute;top:12px;right:12px;background:rgba(255,255,255,0.18);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center; }
         .popup-icon-wrap { background:rgba(255,255,255,0.2);border-radius:10px;padding:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
-        .popup-title { font-family:'Fraunces',serif;font-size:17px;font-weight:700;color:#fff;margin:0; }
+        .popup-title { font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;color:#fff;margin:0; }
         .popup-sub   { font-size:12px;color:rgba(255,255,255,0.75);margin:2px 0 0;font-weight:500; }
         .popup-badge { background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9);font-size:10px;padding:3px 9px;border-radius:20px;font-weight:600;border:1px solid rgba(255,255,255,0.2); }
         .popup-body  { padding:18px 18px 28px; }
@@ -571,8 +569,8 @@ export default function LastCare() {
         .hero-bg img { width:100%;height:100%;object-fit:cover;object-position:center; }
         .hero-overlay { position:absolute;inset:0;background:linear-gradient(70deg,rgba(10,30,60,0.90) 0%,rgba(10,30,60,0.75) 50%,rgba(10,30,60,0.45) 60%); }
         .hero-content { position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:clamp(100px,12vw,140px) 24px 60px;width:100%; }
-        .hero-headline { font-family:'Fraunces',serif;font-size:clamp(20px,4vw,54px);font-weight:900;line-height:1.1;color:#fff;margin-bottom:18px;white-space:nowrap; }
-        .hero-headline span { color:#1A237F;font-style:italic; }
+        .hero-headline { font-family:'Poppins',sans-serif;font-size:clamp(20px,4vw,54px);font-weight:900;line-height:1.1;color:#fff;margin-bottom:18px;white-space:nowrap; }
+        .hero-headline span { color:#ffffff;font-style:poppins; }
         .hero-sub { font-size:clamp(14px,1.6vw,17px);color:rgba(255,255,255,0.78);line-height:1.75;max-width:500px;margin-bottom:36px; }
         .hero-btns { display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px; }
         .hero-trust { display:flex;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.15); }
@@ -584,10 +582,10 @@ export default function LastCare() {
         .about-imgs { position:relative; }
         .about-img-main { width:100%;height:460px;object-fit:cover;border-radius:24px;display:block;box-shadow:var(--shadow-lg); }
         .about-badge { position:absolute;bottom:-24px;left:24px;background:var(--blue);color:#fff;border-radius:18px;padding:18px 24px;box-shadow:var(--shadow-lg); }
-        .about-badge-num { font-family:'Fraunces',serif;font-size:38px;font-weight:900;line-height:1; }
+        .about-badge-num { font-family:'Poppins',sans-serif;font-size:38px;font-weight:900;line-height:1; }
         .about-badge-lbl { font-size:12px;color:rgba(255,255,255,0.7);font-weight:600;margin-top:4px; }
         .about-img-sm { position:absolute;top:24px;right:-24px;width:140px;height:140px;object-fit:cover;border-radius:16px;border:4px solid #fff;box-shadow:var(--shadow-lg);display:block; }
-        .about-title { font-family:'Fraunces',serif;font-size:clamp(26px,3.5vw,48px);font-weight:900;line-height:1.12;color:var(--text);margin-bottom:20px; }
+        .about-title { font-family:'Poppins',sans-serif;font-size:clamp(26px,3.5vw,48px);font-weight:900;line-height:1.12;color:var(--text);margin-bottom:20px; }
         .check-list { display:flex;flex-direction:column;gap:12px;margin-bottom:32px; }
         .check-item { display:flex;align-items:center;gap:12px;font-size:15px;color:#374151;font-weight:500;margin-top:12px }
 
@@ -602,7 +600,7 @@ export default function LastCare() {
         .s-tab.active .s-tab-title { color:var(--blue2); }
         .service-detail { flex:1;background:#fff;border:1.5px solid var(--border);border-radius:24px;padding:44px 48px;min-height:320px;box-shadow:var(--shadow); }
         .service-detail-icon  { font-size:52px;margin-bottom:20px; }
-        .service-detail-title { font-family:'Fraunces',serif;font-size:clamp(22px,2.5vw,34px);font-weight:800;color:var(--text);margin-bottom:14px; }
+        .service-detail-title { font-family:'Poppins',sans-serif;font-size:clamp(22px,2.5vw,34px);font-weight:800;color:var(--text);margin-bottom:14px; }
         .service-detail-desc  { font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:24px; }
         .service-chips { display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px; }
         .chip { background:var(--ice);border:1px solid var(--ice2);color:var(--blue);padding:7px 16px;border-radius:30px;font-size:13px;font-weight:600; }
@@ -622,14 +620,14 @@ export default function LastCare() {
         .contact-info-card  { background:var(--blue);border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg); }
         .contact-info-img   { width:100%;height:240px;object-fit:cover;display:block; }
         .contact-info-body  { padding:28px 28px 32px; }
-        .contact-info-title { font-family:'Fraunces',serif;font-size:22px;font-weight:800;color:#fff;margin-bottom:20px; }
+        .contact-info-title { font-family:'Poppins',sans-serif;font-size:22px;font-weight:800;color:#fff;margin-bottom:20px; }
         .contact-row      { display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1);text-decoration:none; }
         .contact-row:last-child { border-bottom:none; }
         .contact-row-icon { width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0; }
         .contact-row-main { color:#fff;font-weight:600;font-size:14px;word-break:break-all; }
         .contact-row-sub  { color:rgba(255,255,255,0.5);font-size:12px;margin-top:2px; }
         .contact-form-card  { background:#fff;border:1.5px solid var(--border);border-radius:24px;padding:40px 40px 44px;box-shadow:var(--shadow); }
-        .contact-form-title { font-family:'Fraunces',serif;font-size:26px;font-weight:800;color:var(--text);margin-bottom:28px; }
+        .contact-form-title { font-family:'Poppins',sans-serif;font-size:26px;font-weight:800;color:var(--text);margin-bottom:28px; }
         .form-row { display:grid;grid-template-columns:1fr 1fr;gap:14px; }
 
         
@@ -738,40 +736,25 @@ export default function LastCare() {
           .s-tab          { min-width:120px; }
         }
       `}</style>
-
       {/* {showPopup && <PopupForm onClose={() => setShowPopup(false)} />} */}
-
       {/* ══ NAVBAR ══ */}
-    <Navbar/>
-
+      <Navbar />
       {/* ══ HERO ══ */}
-    <Hero/>
-  
-
+      <Hero />
       {/* ══ ABOUT ══ */}
-<About/>
-
+      <About />
       {/* ══ SERVICES ══ */}
-     \<Services/>
-
-        {/* ══ Process ══ */}
-        <Process/>
-
+      \<Services />
+      {/* ══ Process ══ */}
+      <Process />
       {/* ══ WHY US ══ */}
-  <WhyChooseUs/>
-
+      <WhyChooseUs />
       {/* ══ CONTACT ══ */}
-    <Contact/>
-
-     {/* ══ Testimonial ══ */}
-     <TestimonialsShowcase/>
-
-    
-
-     
-
+      <Contact />
+      {/* ══ Testimonial ══ */}
+      <TestimonialsShowcase />
       {/* ══ FOOTER ══ */}
-     <Footer/>
+      <Footer />
     </>
   );
 }

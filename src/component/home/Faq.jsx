@@ -1,23 +1,9 @@
 import React from 'react'
 import {
   Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Menu,
-  X,
+ 
   ChevronDown,
-  Snowflake,
-  CheckCircle,
-  Users,
- HeartHandshake,
-  Eye ,
-  Star,
-  Shield,
-  Heart,
-  ArrowRight,
-  Zap,
-  ShieldCheck,
+
 } from "lucide-react";
 
 const Faq = () => {
@@ -32,7 +18,7 @@ const Faq = () => {
             </div>
             <h2
               style={{
-                fontFamily: "'Fraunces',serif",
+                fontFamily: "'Poppins',sans-serif",
                 fontSize: "clamp(26px,3.5vw,44px)",
                 fontWeight: 900,
                 color: "#1a1a2e",
@@ -77,7 +63,7 @@ const Faq = () => {
           >
             <h3
               style={{
-                fontFamily: "'Fraunces',serif",
+                fontFamily: "'Poppins',sans-serif",
                 fontSize: 24,
                 fontWeight: 800,
                 color: "#1a1a2e",

@@ -160,7 +160,7 @@ function CommitCard({ Icon, title, text }) {
       <div style={{ minWidth: 0 }}>
         <h3
           style={{
-            fontFamily: "'Fraunces', serif",
+            fontFamily: "'Poppins', sans-serif",
             fontSize: 16.5,
             fontWeight: 800,
             color: NAVY,
@@ -203,7 +203,7 @@ export default function Commitment() {
       style={{
         position: "relative",
         overflow: "hidden",
-        fontFamily: "'Instrument Sans', sans-serif",
+        fontFamily: "'Poppins', sans-serif",
         padding: "clamp(40px,5vw,64px) clamp(16px,4vw,32px)",
         backgroundColor: "#E9F2FE",
         backgroundImage: [
@@ -246,7 +246,7 @@ export default function Commitment() {
             </span>
             <h2
               style={{
-                fontFamily: "'Fraunces', serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontSize: "clamp(26px,3.4vw,38px)",
                 fontWeight: 900,
                 lineHeight: 1.15,

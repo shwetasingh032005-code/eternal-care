@@ -157,7 +157,7 @@ export default function TestimonialsShowcase() {
             id="testimonials-title"
             style={{
               margin: 0,
-              fontFamily: "'Fraunces', serif",
+              fontFamily: "'Poppins', sans-serif",
               fontWeight: 900,
               fontSize: isSmall ? 28 : isMobile ? 32 : 42,
               lineHeight: 1.15,
@@ -179,14 +179,14 @@ export default function TestimonialsShowcase() {
             style={{
               margin: 0,
               maxWidth: 460,
-              fontFamily: "'Instrument Sans', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: 16,
               lineHeight: 1.8,
               color: C.muted,
             }}
           >
-            Words from families across India and abroad, in their most
-            difficult hours.
+            Words from families across India and abroad, in their most difficult
+            hours.
           </p>
         </div>
 
@@ -199,7 +199,11 @@ export default function TestimonialsShowcase() {
             overflow: "hidden",
             borderRadius: 24,
             background: `linear-gradient(135deg, ${C.navy} 0%, ${C.purple} 100%)`,
-            padding: isSmall ? "32px 22px 26px" : isMobile ? "40px 30px 30px" : "52px 52px 40px",
+            padding: isSmall
+              ? "32px 22px 26px"
+              : isMobile
+                ? "40px 30px 30px"
+                : "52px 52px 40px",
             boxShadow: "0 16px 60px rgba(26,35,126,0.22)",
             color: "#fff",
           }}
@@ -243,7 +247,7 @@ export default function TestimonialsShowcase() {
             <blockquote
               style={{
                 margin: 0,
-                fontFamily: "'Fraunces', serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontStyle: "italic",
                 fontWeight: 500,
                 fontSize: isSmall ? 18 : isMobile ? 20 : 25,
@@ -257,7 +261,7 @@ export default function TestimonialsShowcase() {
             <div style={{ marginTop: 28 }}>
               <div
                 style={{
-                  fontFamily: "'Fraunces', serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontWeight: 700,
                   fontSize: 19,
                   color: "#fff",
@@ -268,7 +272,7 @@ export default function TestimonialsShowcase() {
               <div
                 style={{
                   marginTop: 4,
-                  fontFamily: "'Instrument Sans', sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontSize: 14,
                   color: "rgba(255,255,255,0.78)",
                 }}
@@ -299,7 +303,8 @@ export default function TestimonialsShowcase() {
                     height: 6,
                     width: i === active ? 28 : 8,
                     borderRadius: 4,
-                    background: i === active ? C.gold : "rgba(255,255,255,0.35)",
+                    background:
+                      i === active ? C.gold : "rgba(255,255,255,0.35)",
                     transition: "width .3s ease, background .3s ease",
                   }}
                 />
@@ -365,8 +370,9 @@ export default function TestimonialsShowcase() {
                   border: `1.5px solid ${on ? C.navy : C.border}`,
                   background: on ? C.soft : "#fff",
                   boxShadow: on ? "0 6px 24px rgba(26,35,126,0.1)" : "none",
-                  transition: "background .25s ease, border-color .25s ease, box-shadow .25s ease",
-                  fontFamily: "'Instrument Sans', sans-serif",
+                  transition:
+                    "background .25s ease, border-color .25s ease, box-shadow .25s ease",
+                  fontFamily: "'Poppins', sans-serif",
                 }}
               >
                 <span
@@ -381,7 +387,7 @@ export default function TestimonialsShowcase() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontFamily: "'Fraunces', serif",
+                    fontFamily: "'Poppins', sans-serif",
                     fontWeight: 700,
                     fontSize: 18,
                     transition: "background .25s ease",
@@ -393,7 +399,7 @@ export default function TestimonialsShowcase() {
                   <span
                     style={{
                       display: "block",
-                      fontFamily: "'Fraunces', serif",
+                      fontFamily: "'Poppins', sans-serif",
                       fontWeight: 700,
                       fontSize: 16,
                       color: C.navy,

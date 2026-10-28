@@ -54,7 +54,7 @@ function HoverButton({ as = "button", base, hover, children, ...rest }) {
         minHeight: 50,
         padding: "0 26px",
         borderRadius: 999,
-        fontFamily: "'Instrument Sans', sans-serif",
+        fontFamily: "'Poppins', sans-serif",
         fontWeight: 700,
         fontSize: 15,
         cursor: "pointer",
@@ -75,7 +75,7 @@ function HoverButton({ as = "button", base, hover, children, ...rest }) {
  *  - onBook: function called when "Book Freezer Box" is clicked
  *  - phoneHref: tel link used by "Call Now" (default is the number from your old code)
  */
-export default function About({ onBook, phoneHref = "tel:+919999741394" }) {
+export default function About({ onBook, phoneHref = "tel:+918800680093" }) {
   const width = useScreenWidth();
   const isDesktop = width >= 1024;
   const isMobile = width < 768;
@@ -115,7 +115,7 @@ export default function About({ onBook, phoneHref = "tel:+919999741394" }) {
               color: C.navy,
               padding: "7px 16px",
               borderRadius: 999,
-              fontFamily: "'Instrument Sans', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: 13,
               fontWeight: 700,
               marginBottom: 20,
@@ -128,7 +128,7 @@ export default function About({ onBook, phoneHref = "tel:+919999741394" }) {
             id="about-title"
             style={{
               margin: "0 0 14px",
-              fontFamily: "'Fraunces', serif",
+              fontFamily: "'Poppins', sans-serif",
               fontWeight: 900,
               fontSize: isSmall ? 30 : isMobile ? 36 : 46,
               lineHeight: 1.15,
@@ -155,7 +155,7 @@ export default function About({ onBook, phoneHref = "tel:+919999741394" }) {
               key={p}
               style={{
                 margin: "0 0 16px",
-                fontFamily: "'Lobster Two', 'Instrument Sans', sans-serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontSize: isSmall ? 17 : 19,
                 lineHeight: 1.3,
                 color: C.text,
@@ -188,7 +188,7 @@ export default function About({ onBook, phoneHref = "tel:+919999741394" }) {
             <p
               style={{
                 margin: 0,
-                fontFamily: "'Lobster Two', 'Fraunces', serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontStyle: "italic",
                 fontWeight: 700,
                 fontSize: isSmall ? 18 : 21,
@@ -213,7 +213,7 @@ export default function About({ onBook, phoneHref = "tel:+919999741394" }) {
           <h3
             style={{
               margin: "0 0 22px",
-              fontFamily: "'Fraunces', serif",
+              fontFamily: "'Poppins', sans-serif",
               fontWeight: 700,
               fontSize: isSmall ? 24 : 30,
               lineHeight: 1.2,
@@ -244,7 +244,7 @@ export default function About({ onBook, phoneHref = "tel:+919999741394" }) {
                   border: "1px solid rgba(255,255,255,0.2)",
                   borderRadius: 14,
                   padding: isSmall ? "14px 14px" : "16px 18px",
-                  fontFamily: "'Instrument Sans', sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontWeight: 500,
                   fontSize: isSmall ? 15 : 16,
                   lineHeight: 1.45,
