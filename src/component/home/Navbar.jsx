@@ -16,7 +16,7 @@ const DEFAULT_LINKS = [
   { label: "Home", id: "home" },
   { label: "About", id: "about" },
   { label: "Services", id: "services" },
-  { label: "Testimonial", id: "testimonials" },
+  // { label: "Testimonial", id: "testimonials" },
   { label: "Contact", id: "contact" },
 ];
 
