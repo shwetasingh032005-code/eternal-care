@@ -75,7 +75,7 @@ function HoverButton({ as = "button", base, hover, children, ...rest }) {
  *  - onBook: function called when "Book Freezer Box" is clicked
  *  - phoneHref: tel link used by "Call Now" (default is the number from your old code)
  */
-export default function About({ onBook, phoneHref = "tel:+918800680093" }) {
+export default function About({ onBook, phoneHref = "tel:+919999741394" }) {
   const width = useScreenWidth();
   const isDesktop = width >= 1024;
   const isMobile = width < 768;
@@ -272,7 +272,12 @@ export default function About({ onBook, phoneHref = "tel:+918800680093" }) {
             <HoverButton
               as="button"
               type="button"
-              onClick={onBook}
+              onClick={() => {
+                if (onBook) onBook();
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
               base={{
                 background: "#fff",
                 color: C.navy,
