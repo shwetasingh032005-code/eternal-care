@@ -22,7 +22,7 @@ const quickLinks = [
   { label: "Home", target: "home" },
   { label: "About Us", target: "about" },
   { label: "Our Services", target: "services" },
-  { label: "FAQ", target: "faq" },
+  // { label: "FAQ", target: "faq" },
   { label: "Contact Us", target: "contact" },
 ];
 
